@@ -23,18 +23,29 @@ public class Deck {
         }
     }
 
+    public Deck(String rank, boolean lowAce, int ace, int numberOfSuits, int cardsPerSuit){
+        //TODO
+    }
     // ACCESSORS
     public Card[] getCards() {
         return this.cards;
     }
-
+    public int numberOfCards(){
+        return cards.length;
+    }
+    public Card getCardAt(int position){
+        return cards[position];
+    }
     // MUTATORS
     public void setCards(Card[] cards) {
         this.cards = cards;
     }
-
-    // METHODS
-    public void shuffleCards() {
-        // Shuffle this.cards in a random order
+    public void shuffle(){
+        for(int i=0; i<this.numberOfCards();i++){
+            int swapIndex = (int) (this.numberOfCards()*Math.random());
+            Card temp = this.getCardAt(i);
+            this.getCards()[i] = this.getCardAt(swapIndex);
+            this.getCards()[swapIndex] = temp;
+        }
     }
 }
