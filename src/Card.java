@@ -66,6 +66,12 @@ public class Card {
         this.playable = playable;
     }
     @Override
+    /*public static void toString(){
+        for(Card c : Deck.getCards()){
+            System.out.println(c);
+            System.out.println("-----------------------------");
+        }
+    }*/
     public String toString(){
         String report = "symbol: " + this.symbol + "\n" + "color: " + this.color + "\n" + "rank: " + this.rank + "\n" + "value: " + this.value + "\n" + "playable: " + this.playable;
         return report;
