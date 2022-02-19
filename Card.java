@@ -1,4 +1,4 @@
-package src;
+//package src;
 public class Card {
     private String color;
     private String rank;
